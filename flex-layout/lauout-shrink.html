@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shrink layout</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-around;
+        background-color: gray;
+      }
+      .container > * {
+        background-color: green;
+        border: 1px solid yellowgreen;
+      }
+      .flex1 {
+        flex-basis: 200px;
+      }
+      .flex2 {
+        flex-basis: 200px;
+      }
+      .flex3 {
+        flex-basis: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex1">Flex1</div>
+      <div class="flex2">Flex2</div>
+      <div class="flex3">Flex3</div>
+    </div>
+  </body>
+</html>

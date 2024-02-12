@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: auto 400px minmax(200px, 500px);
+        grid-template-rows: 1fr 1fr 2fr;
+        grid-auto-rows: 50px;
+        justify-content: center;
+      }
+
+      .item {
+        background-color: rgb(87, 157, 87);
+        border: 1px solid white;
+        /* its easy to set layout by considering each grid item as flex */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Width expands to fill space</div>
+      <div class="item">400px wide</div>
+      <div class="item">min 200px max 500px wide</div>
+      <div class="item">width expands to fill space</div>
+      <div class="item">400px wide</div>
+      <div class="item">min 200px max 500px wide</div>
+      <div class="item">width expands to fill space</div>
+      <div class="item">400px wide</div>
+      <div class="item">min 200px max 500px wide</div>
+      <div class="item">50px high</div>
+    </div>
+  </body>
+</html>

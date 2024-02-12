@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex container and direct children</title>
+    <style>
+      .container {
+        color: white;
+        border: 1px solid yellowgreen;
+        display: flex;
+        /* we need to set this if wanted to increase height(top-bottom) and '.container > *' this sets height of all the children of container*/
+        flex-direction: column;
+      }
+      .container > * {
+        flex-basis: 300px;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .orange {
+        background-color: orange;
+      }
+      .yellow {
+        background-color: yellow;
+        color: gray;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .black {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="red">Blue</div>
+      <div class="blue">Blue</div>
+      <div class="orange">Orange</div>
+      <div class="yellow">Yellow</div>
+      <div class="purple">Purple</div>
+      <div class="black">Black</div>
+    </div>
+  </body>
+</html>
